@@ -42,7 +42,8 @@ const REVIEWS: Review[] = [
 
 export function GoogleBusinessSection() {
   const mapQuery = encodeURIComponent("Rua Orlando Pérez, 662 - Loteamento Habitacional São Carlos 2, São Carlos - SP");
-  const mapUrl = `https://maps.google.com/maps?q=${mapQuery}&t=&z=16&ie=UTF8&iwloc=&output=embed`;
+  const businessSearchQuery = encodeURIComponent("Richard Barbeiro e Próteses Capilar - Rua Orlando Pérez, 662, São Carlos - SP");
+  const mapUrl = `https://maps.google.com/maps?q=${businessSearchQuery}&t=&z=16&ie=UTF8&iwloc=&output=embed`;
 
   return (
     <section className="py-20 bg-zinc-950 border-t border-zinc-900 relative overflow-hidden">
@@ -64,7 +65,7 @@ export function GoogleBusinessSection() {
             Onde a <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600">Transformação</span> Acontece
           </h2>
           <p className="text-zinc-400 font-sans font-light text-base sm:text-lg">
-            Visite nossa clínica de visagismo e barbearia em São Carlos. Um ambiente projetado para sua total discrição e conforto.
+            Visite nossa clínica de visagismo e barbearia em São Carlos. Um ambiente projetado para sua total discrição and conforto.
           </p>
         </div>
 
@@ -95,7 +96,7 @@ export function GoogleBusinessSection() {
               </div>
 
               <a 
-                href="https://www.google.com/search?q=protese+capilar+sao+carlos" 
+                href={`https://www.google.com/maps/search/?api=1&query=${businessSearchQuery}`} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-zinc-900 border border-zinc-800 hover:border-amber-600/40 hover:bg-zinc-800/50 text-xs font-medium text-zinc-300 transition-all duration-300 hover:text-amber-500"
@@ -206,7 +207,7 @@ export function GoogleBusinessSection() {
         {/* Bottom CTA for directions */}
         <div className="text-center mt-8">
           <a
-            href={`https://www.google.com/maps/search/?api=1&query=${mapQuery}`}
+            href={`https://www.google.com/maps/search/?api=1&query=${businessSearchQuery}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-xs text-amber-500 hover:text-amber-400 hover:underline transition-colors font-medium uppercase tracking-wider"
