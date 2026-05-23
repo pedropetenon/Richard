@@ -20,7 +20,7 @@ export function Footer() {
         {/* Center: Address */}
         <div className="text-center space-y-1.5">
           <p className="text-zinc-400 font-sans tracking-wide">
-            Rua Orlando Perez, São Carlos - SP, 13563-210
+            Rua Orlando Pérez, 662 - Habitacional São Carlos 2, São Carlos - SP, 13568-812
           </p>
         </div>
 
