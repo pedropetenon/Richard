@@ -26,7 +26,7 @@ const cases = [
     afterImg: "/images/case2-after.png",
     details: [
       "Prótese capilar base de seda premium híbrida.",
-      "Design de barba integrada com linhas faciais.",
+      "Restauração completa da falha na coroa capilar.",
       "Finalização com técnicas avançadas de barbearia de luxo."
     ]
   }
