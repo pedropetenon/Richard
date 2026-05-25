@@ -38,8 +38,9 @@ export function HeroSection() {
               className="object-contain"
             />
           </div>
-          <span className="font-serif text-zinc-100 text-lg tracking-widest font-semibold uppercase">
-            Richard Barbeiro e Próteses Capilar
+          <span className="font-serif text-zinc-100 text-sm sm:text-lg tracking-widest font-semibold uppercase leading-none">
+            <span className="sm:hidden">Richard</span>
+            <span className="hidden sm:inline">Richard Barbeiro e Próteses Capilar</span>
           </span>
         </div>
 
