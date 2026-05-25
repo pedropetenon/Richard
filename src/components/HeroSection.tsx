@@ -11,19 +11,22 @@ export function HeroSection() {
       
       {/* Background Image placed on the right, fading into solid black on the left */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute right-0 top-0 bottom-0 w-full lg:w-[60%] h-full">
+        {/* Golden Radial Glow behind the owner (desktop only) */}
+        <div className="absolute right-[5%] bottom-[-5%] w-[50%] h-[80%] bg-amber-500/10 rounded-full blur-[120px] hidden lg:block" />
+        
+        <div className="absolute right-0 top-0 bottom-0 w-full lg:w-[55%] h-full">
           <Image
-            src="/images/hero-bg.png"
-            alt="Barbearia e Restauração Capilar de Alta Performance"
+            src="/images/owner.png"
+            alt="Richard - Centro de Imagem Masculina"
             fill
             priority
-            className="object-cover object-center opacity-80"
+            className="object-contain object-bottom opacity-30 lg:opacity-85 transition-opacity duration-700"
           />
-          {/* Gradient transitions: vertical on mobile, horizontal on desktop */}
-          <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/50 to-transparent lg:bg-gradient-to-r lg:from-zinc-950 lg:via-zinc-950/30 lg:to-transparent" />
+          {/* Gradient transitions: vertical on mobile, horizontal on desktop to ensure text readability */}
+          <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-transparent lg:bg-gradient-to-r lg:from-zinc-950 lg:via-zinc-950/40 lg:to-transparent" />
         </div>
         {/* Full screen solid black block on the left (desktop only) */}
-        <div className="absolute left-0 top-0 bottom-0 w-[40%] bg-zinc-950 hidden lg:block" />
+        <div className="absolute left-0 top-0 bottom-0 w-[45%] bg-zinc-950 hidden lg:block" />
       </div>
 
       {/* Top Header/Navbar */}
