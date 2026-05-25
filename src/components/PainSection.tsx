@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion, Variants } from 'framer-motion';
 import { Wind, Clock, Lock, CameraOff } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -29,6 +29,17 @@ const cards = [
 ];
 
 export function PainSection() {
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    const scrollPosition = e.currentTarget.scrollLeft;
+    const containerWidth = e.currentTarget.clientWidth;
+    if (containerWidth > 0) {
+      const index = Math.round(scrollPosition / (containerWidth - 32));
+      setActiveSlide(Math.max(0, Math.min(cards.length - 1, index)));
+    }
+  };
+
   const containerVariants: Variants = {
     hidden: {},
     show: {
@@ -109,36 +120,53 @@ export function PainSection() {
           </div>
 
           {/* Coluna da Direita (Grid de Cenários) */}
-          <motion.div 
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, margin: "-105px" }}
-            className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6"
-          >
-            {cards.map((card, index) => {
-              const Icon = card.icon;
-              return (
-                <motion.div
-                  key={index}
-                  variants={cardVariants}
+          <div className="lg:col-span-7 flex flex-col">
+            <motion.div 
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, margin: "-105px" }}
+              onScroll={handleScroll}
+              className="flex sm:grid sm:grid-cols-2 gap-6 overflow-x-auto sm:overflow-visible snap-x snap-mandatory scrollbar-none pb-4 sm:pb-0 px-4 -mx-4 sm:px-0 sm:mx-0"
+            >
+              {cards.map((card, index) => {
+                const Icon = card.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    variants={cardVariants}
+                    className={cn(
+                      "p-6 rounded-2xl bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 shrink-0 snap-center",
+                      "w-[80vw] min-w-[260px] sm:w-auto sm:min-w-0",
+                      "hover:border-zinc-700 hover:bg-zinc-900 transition-all duration-300",
+                      "flex flex-col gap-4"
+                    )}
+                  >
+                    <div className="h-10 w-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500 shrink-0">
+                      <Icon className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h3 className="text-base font-medium text-zinc-200 mb-1.5">{card.title}</h3>
+                      <p className="text-zinc-400 font-light text-xs sm:text-sm leading-relaxed">{card.description}</p>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </motion.div>
+
+            {/* Mobile Slide Indicators */}
+            <div className="flex sm:hidden justify-center items-center gap-1.5 mt-6">
+              {cards.map((_, idx) => (
+                <div 
+                  key={idx} 
                   className={cn(
-                    "p-6 rounded-2xl bg-zinc-900/50 backdrop-blur-sm border border-zinc-800",
-                    "hover:border-zinc-700 hover:bg-zinc-900 transition-all duration-300",
-                    "flex flex-col gap-4"
-                  )}
-                >
-                  <div className="h-10 w-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500 shrink-0">
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h3 className="text-base font-medium text-zinc-200 mb-1.5">{card.title}</h3>
-                    <p className="text-zinc-400 font-light text-xs sm:text-sm leading-relaxed">{card.description}</p>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </motion.div>
+                    "h-1.5 rounded-full transition-all duration-300",
+                    activeSlide === idx ? "w-6 bg-amber-500" : "w-1.5 bg-zinc-850"
+                  )} 
+                />
+              ))}
+            </div>
+          </div>
 
         </div>
       </div>
