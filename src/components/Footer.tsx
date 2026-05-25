@@ -1,4 +1,5 @@
 import React from 'react';
+import { Instagram, Facebook } from 'lucide-react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -24,20 +25,45 @@ export function Footer() {
           </p>
         </div>
 
-        {/* Right Side: Legal links */}
-        <div className="flex gap-6">
-          <a 
-            href="#" 
-            className="hover:text-zinc-300 transition-colors duration-300 tracking-wide hover:underline underline-offset-4"
-          >
-            Termos de Uso
-          </a>
-          <a 
-            href="#" 
-            className="hover:text-zinc-300 transition-colors duration-300 tracking-wide hover:underline underline-offset-4"
-          >
-            Políticas de Privacidade
-          </a>
+        {/* Right Side: Social & Legal links */}
+        <div className="flex flex-col items-center md:items-end gap-3.5">
+          {/* Social Icons */}
+          <div className="flex gap-4 items-center">
+            <a 
+              href="https://www.instagram.com/richardprotesecapilar/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-zinc-400 hover:text-amber-500 transition-colors duration-300 p-1.5 rounded-full hover:bg-zinc-900 border border-transparent hover:border-zinc-800/80"
+              aria-label="Siga-nos no Instagram"
+            >
+              <Instagram className="w-4.5 h-4.5" />
+            </a>
+            <a 
+              href="https://www.facebook.com/BarberShopRichard" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-zinc-400 hover:text-amber-500 transition-colors duration-300 p-1.5 rounded-full hover:bg-zinc-900 border border-transparent hover:border-zinc-800/80"
+              aria-label="Siga-nos no Facebook"
+            >
+              <Facebook className="w-4.5 h-4.5" />
+            </a>
+          </div>
+
+          {/* Legal Links */}
+          <div className="flex gap-5">
+            <a 
+              href="#" 
+              className="hover:text-zinc-300 transition-colors duration-300 tracking-wide hover:underline underline-offset-4"
+            >
+              Termos de Uso
+            </a>
+            <a 
+              href="#" 
+              className="hover:text-zinc-300 transition-colors duration-300 tracking-wide hover:underline underline-offset-4"
+            >
+              Políticas de Privacidade
+            </a>
+          </div>
         </div>
 
       </div>
