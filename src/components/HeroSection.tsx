@@ -51,10 +51,11 @@ export function HeroSection() {
           href="https://wa.me/5516992533317?text=Olá, gostaria de agendar uma avaliação."
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden sm:inline-flex items-center justify-center px-5 py-2 border border-zinc-800 hover:border-amber-600/40 text-amber-500 rounded-full font-medium transition-all duration-300 hover:scale-105 text-xs bg-zinc-900/50 backdrop-blur-sm"
+          className="inline-flex items-center justify-center px-4 py-2 sm:px-5 border border-zinc-800 hover:border-amber-600/40 text-amber-500 rounded-full font-medium transition-all duration-300 hover:scale-105 text-xs bg-zinc-900/50 backdrop-blur-sm"
         >
           Entre em contato
         </a>
+
       </header>
 
       {/* Mobile/Tablet Owner Image (Visible only on mobile/tablet) */}
