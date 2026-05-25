@@ -20,10 +20,10 @@ export function HeroSection() {
             alt="Richard - Centro de Imagem Masculina"
             fill
             priority
-            className="object-contain object-bottom opacity-30 lg:opacity-85 transition-opacity duration-700"
+            className="object-contain object-bottom opacity-65 lg:opacity-85 transition-opacity duration-700"
           />
-          {/* Gradient transitions: vertical on mobile, horizontal on desktop to ensure text readability */}
-          <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-transparent lg:bg-gradient-to-r lg:from-zinc-950 lg:via-zinc-950/40 lg:to-transparent" />
+          {/* Gradient transitions: vertical on mobile (darker at bottom for text contrast), horizontal on desktop */}
+          <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-zinc-950/20 lg:bg-gradient-to-r lg:from-zinc-950 lg:via-zinc-950/40 lg:to-transparent" />
         </div>
         {/* Full screen solid black block on the left (desktop only) */}
         <div className="absolute left-0 top-0 bottom-0 w-[45%] bg-zinc-950 hidden lg:block" />
@@ -58,7 +58,8 @@ export function HeroSection() {
       </header>
 
       {/* Hero Content Grid */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 flex-1 flex items-center py-12 md:py-20">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 flex-1 flex items-end lg:items-center pt-28 pb-12 lg:py-20">
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
           
           {/* Left Column: Text & Actions */}
