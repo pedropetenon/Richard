@@ -4,7 +4,8 @@ from collections import deque
 
 def remove_background_robust():
     src_path = "/Users/pedropetenon/.gemini/antigravity-ide/brain/8b6b1e0c-a0f7-4239-8a76-73f1a3832022/media__1779729921830.jpg"
-    dest_path = "/Users/pedropetenon/Richard/public/images/owner.png"
+    dest_path = "/Users/pedropetenon/Richard/public/images/owner-refined.png"
+
     
     if not os.path.exists(src_path):
         print(f"Error: Source image not found at {src_path}")

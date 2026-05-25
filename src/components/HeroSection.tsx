@@ -16,7 +16,7 @@ export function HeroSection() {
         
         <div className="absolute right-0 top-0 bottom-0 w-[55%] h-full">
           <Image
-            src="/images/owner.png?v=2"
+            src="/images/owner-refined.png"
             alt="Richard - Centro de Imagem Masculina"
             fill
             priority
@@ -63,7 +63,7 @@ export function HeroSection() {
           {/* Subtle Golden Radial Glow behind the owner on mobile */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(245,158,11,0.15)_0%,transparent_70%)]" />
           <Image
-            src="/images/owner.png?v=2"
+            src="/images/owner-refined.png"
             alt="Richard - Centro de Imagem Masculina"
             fill
             priority
