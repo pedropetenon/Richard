@@ -112,10 +112,11 @@ export function PainSection() {
                 href="https://wa.me/5516992533317?text=Olá, gostaria de agendar minha avaliação gratuita e confidencial."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-3 bg-zinc-900 border border-zinc-800 hover:border-amber-600/40 text-amber-500 rounded-full font-medium transition-all duration-300 hover:scale-105 active:scale-95 text-sm"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-zinc-950 rounded-full font-semibold transition-all duration-300 hover:scale-105 active:scale-95 text-sm sm:text-base shadow-[0_0_30px_rgba(245,158,11,0.25)] hover:shadow-[0_0_40px_rgba(245,158,11,0.45)]"
               >
                 Agende agora sua avaliação gratuita
               </a>
+
             </motion.div>
           </div>
 

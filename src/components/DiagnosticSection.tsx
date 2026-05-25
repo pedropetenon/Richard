@@ -221,11 +221,12 @@ Gostaria de agendar minha avaliação gratuita e confidencial.`;
                         href={getWhatsAppLink()}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-full sm:w-auto group relative inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-amber-500 hover:bg-amber-600 text-zinc-950 rounded-full font-medium transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(245,158,11,0.15)] text-sm md:text-base"
+                        className="w-full sm:w-auto group relative inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-zinc-950 rounded-full font-semibold transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(245,158,11,0.25)] hover:shadow-[0_0_40px_rgba(245,158,11,0.45)] text-sm md:text-base"
                       >
                         <span>Enviar Diagnóstico no WhatsApp</span>
                         <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                       </a>
+
                       <button
                         onClick={resetQuiz}
                         className="text-zinc-500 hover:text-zinc-300 transition-colors flex items-center gap-1.5 text-xs tracking-wider uppercase font-mono py-2"

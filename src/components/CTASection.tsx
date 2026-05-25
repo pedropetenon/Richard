@@ -36,11 +36,12 @@ export function CTASection() {
             href="https://wa.me/5516992533317?text=Olá, gostaria de agendar minha avaliação gratuita."
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative inline-flex items-center gap-3 px-8 py-4 bg-amber-500 hover:bg-amber-600 text-zinc-950 rounded-full font-medium transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(245,158,11,0.15)] hover:shadow-[0_0_30px_rgba(245,158,11,0.3)]"
+            className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-zinc-950 rounded-full font-semibold transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(245,158,11,0.25)] hover:shadow-[0_0_40px_rgba(245,158,11,0.45)]"
           >
             <span>Agende agora sua avaliação gratuita</span>
             <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
           </a>
+
 
           <span className="text-zinc-650 text-xs mt-6 font-sans">
             *Vagas limitadas para este mês devido ao atendimento exclusivo e personalizado.
