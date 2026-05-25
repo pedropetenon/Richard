@@ -10,8 +10,8 @@ const cases = [
     id: 1,
     name: "Caso 01 — Restauração Frontal & Alinhamento Temporal",
     subtitle: "Visagismo focado em autoridade e presença profissional.",
-    beforeImg: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600&h=800",
-    afterImg: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=600&h=800",
+    beforeImg: "/images/case1-before.png",
+    afterImg: "/images/case1-after.png",
     details: [
       "Prótese capilar micropele ultrarrealista frontal.",
       "Visagismo para harmonização com formato mandibular.",
@@ -22,8 +22,8 @@ const cases = [
     id: 2,
     name: "Caso 02 — Preenchimento de Coroa & Densidade Geral",
     subtitle: "Restauração de volume para imagem rejuvenescida e ativa.",
-    beforeImg: "https://images.unsplash.com/photo-1620122303020-43ec4b6cf7f8?auto=format&fit=crop&q=80&w=600&h=800",
-    afterImg: "https://images.unsplash.com/photo-1605462863863-10d9e47e15ee?auto=format&fit=crop&q=80&w=600&h=800",
+    beforeImg: "/images/case2-before.png",
+    afterImg: "/images/case2-after.png",
     details: [
       "Prótese capilar base de seda premium híbrida.",
       "Design de barba integrada com linhas faciais.",
